@@ -1,0 +1,159 @@
+/* Typography */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px !important;
+}
+/* General */
+.logo { font-weight: 500 !important;}
+.text-warning {  color: #bdbb70 !important;}
+.text-muted { color: #bcbcbc !important;}
+.text-success { color: #e0375c !important;}
+.text-light { color: #cfd6e1 !important;}
+.bg-dark { background-color: #212934 !important;}
+.bg-light { background-color: #e9eef5 !important;}
+.bg-black { background-color: #1d242d !important;}
+.bg-success { background-color: #b93e59 !important;}
+.btn-success {
+  background-color: #b93e59 !important;
+  border-color: #b93e59 !important;
+}
+.pagination .page-link:hover {color: #000;}
+.pagination .page-link:hover, .pagination .page-link.active {
+  background-color: #b93e59;
+  color: #fff;
+}
+/* Nav */
+#crisalida_nav_top { min-height: 40px;}
+#crisalida_nav_top * { font-size: .9em !important;}
+#crisalida_main_nav a { color: #212934;}
+#crisalida_main_nav a:hover { color: #c72d4e;}
+#crisalida_main_nav .navbar .nav-icon { margin-right: 20px;}
+
+/* Carrusel */
+#crisalida-carousel { background: url(../img/banner1.jpg) !important; 
+ background-size: 100% !important;
+}
+/* Acordeón */
+.crisalida-accordion a { color: #000;}
+.crisalida-accordion a:hover { color: #333d4a;}
+/* tienda */
+.shop-top-menu a:hover { color: #b93e59 !important;}
+/* Product */
+.product-wap { box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);}
+.product-wap .product-color-dot.color-dot-red { background:#f71515;}
+.product-wap .product-color-dot.color-dot-blue { background:#6db4fe;}
+.product-wap .product-color-dot.color-dot-black { background:#000000;}
+.product-wap .product-color-dot.color-dot-light { background:#e0e0e0;}
+.product-wap .product-color-dot.color-dot-green { background:#b93e59;}
+.card.product-wap .card .product-overlay {
+  background: rgba(0,0,0,.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+.card.product-wap:hover .card .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card.product-wap a { color: #000;}
+#carousel-related-product .slick-slide:focus { outline: none !important;}
+#carousel-related-product .slick-dots li button:before {
+  font-size: 15px;
+  margin-top: 20px;
+}
+/* Brand */
+.brand-img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: .5s;
+}
+.brand-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+/* Carousel Hero */
+#crisalida-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #b93e59;
+}
+#crisalida-carousel .carousel-control-next i,
+#crisalida-carousel .carousel-control-prev i {
+  color: #4b3639 !important;
+  font-size: 2.8em !important;
+}
+/* Carousel Brand */
+.tempaltemo-carousel .h1 {
+  font-size: .5em !important;
+  color: #000 !important;
+}
+/* Services */
+.services-icon-wap {transition: .3s;}
+.services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
+.services-icon-wap:hover {background: #b93e59;}
+/* Contact map */
+.leaflet-control a, .leaflet-control { font-size: 10px !important;}
+.form-control { border: 1px solid #e8e8e8;}
+/* Footer */
+#crisalida_footer a { color: #dcdde1;}
+#crisalida_footer a:hover { color: #c06478;}
+#crisalida_footer ul.footer-link-list li { padding-top: 10px;}
+#crisalida_footer ul.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+}
+#crisalida_footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s;
+}
+#crisalida_footer ul.footer-icons li:hover i {
+  color: #212934;
+  transition: .5s;
+}
+#crisalida_footer .border-light { border-color: #2d343f !important;}
+
+.product-wap .h3, .product-wap li, .product-wap i, .product-wap p {
+  font-size: 12px !important;
+}
+.product-wap .product-color-dot {
+  width: 6px;
+  height: 6px;
+}
+
+@media (min-width: 576px) {
+  .crisalida-carousel .h1 { font-size: 1em !important;}
+}
+
+/*// Tablets */
+@media (min-width: 768px) {
+  #crisalida_main_nav .navbar-nav {max-width: 450px;}
+ }
+
+/*  992px o más*/
+@media (min-width: 992px) {
+  #crisalida_main_nav .navbar-nav {max-width: 550px;}
+  #crisalida-carousel .carousel-item {min-height: 30rem !important;}
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* escritorios con pantalla grande*/
+@media (min-width: 1200px) {}
