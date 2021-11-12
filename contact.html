@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link rel="stylesheet" href="sweetalert2.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <!-- estilos de fonts y layouts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
@@ -134,34 +137,44 @@
     <!-- Start Contact -->
     <div class="container py-5 wow animate__animated animate__fadeIn animate__delay-0.8s" id="backgroundContact">
         <div class="row py-5">
-            <form class="col-md-9 m-auto" method="post" role="form">
+            <form class="col-md-9 m-auto" id="formC" method="post" role="form">
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputname">Nombre</label>
-                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Nombre">
+                        <input type="text" class="form-control mt-1" id="nameC" name="name" placeholder="Nombre">
+                        <p class="fail-form" id="failName"></p>
                     </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="inputemail">Correo Electrónico</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Correo Electrónico" required>
+                        <input type="email" class="form-control mt-1" id="emailC" name="email" placeholder="Correo Electrónico">
+                        <p class="fail-form" id="failEmail"></p>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="inputsubject">Asunto</label>
-                    <input type="text" class="form-control mt-1" id="subject" name="subject" placeholder="Asunto">
+                    <input type="text" class="form-control mt-1" id="subjectC" name="subject" placeholder="Asunto">
+                    <p class="fail-form" id="failSubject"></p>
                 </div>
                 <div class="mb-3">
                     <label for="inputmessage">Mensaje</label>
-                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Deja tu Crisálida aquí" rows="8" required></textarea>
+                    <textarea class="form-control mt-1" id="messageC" name="message" placeholder="Deja tu Crisálida aquí" rows="8" required></textarea>
+                    <p class="fail-form" id="failMessage"></p>
                 </div>
+                <p class="failure" id="try-again"></p>
                 <div class="row">
                     <div class="col text-end mt-2">
-                        <button type="submit" class="btn btn-success btn-lg px-3" id="botonVolar">¡Hazlo Volar!</button>
+                        <button type="submit" class="btn btn-success btn-lg px-3" id="botonVolarC">¡Hazlo Volar!</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
     <!-- End Contact -->
+    <div id="div-whatsapp" class="wow animate__animated animate__fadeIn animate__delay-0.8s">
+        <a class="boton__whatsapp" id="whatsapp" target="_blank"
+            href="https://api.whatsapp.com/send?phone=5491138135612&text=¡Hola!%20Tengo%20una%20consulta%20sobre%20Crisálida"><i
+                class="fab fa-whatsapp m-1 boton__whatsapp--logo" title="Whatsapp link"></i></a>
+    </div>
 
 
     <!-- Start Footer -->
@@ -257,11 +270,15 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <!-- <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/crisalidacc.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
     <script src="assets/js/wow.min.js"></script>
     <script>
         new WOW().init();

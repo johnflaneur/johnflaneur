@@ -78,3 +78,35 @@ Custom Css
 #backgroundContact{
   background-color:rgba(248, 192, 209, 0.575);
 }
+
+
+/* LOGO WPP */
+.boton__whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  right: 90px;
+  bottom: 70px;
+  background-color: rgba(248, 192, 209, 0.575);
+  color: rgb(255, 21, 60);
+  border-radius: 52px;
+  z-index: 999;
+  text-align: center;
+  float: right;
+  text-decoration: none;
+}
+
+.boton__whatsapp:hover {
+  color:rgb(255, 1, 136);
+ 
+  
+}
+
+.boton__whatsapp--logo {
+  text-align: center;
+  top: 20px;
+  font-size: 3rem;
+  margin-top: .4rem;
+}
+
+/* modal cart shop*/

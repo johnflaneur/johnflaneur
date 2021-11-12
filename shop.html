@@ -83,10 +83,10 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#crisalida_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#crisalida_search">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">3</span>
                     </a>
@@ -100,25 +100,24 @@
         </div>
     </nav>
     <!-- Close Header -->
-
-    <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="w-100 pt-1 mb-5 text-right">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- modalsito -->
+    <div class="modal" tabindex="-1" id="crisalida_search">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Carrito Crisálida</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                    <button type="submit" class="input-group-text bg-success text-light">
-                        <i class="fa fa-fw fa-search text-white"></i>
-                    </button>
-                </div>
-            </form>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">¡Comprar!</button>
+            </div>
+          </div>
         </div>
     </div>
-
-
+    <!-- Modal -->
 
     <!-- Start Content -->
     <div class="container py-5">
@@ -187,6 +186,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- <div class="container">
+                <div class="row" id="cards-cart"></div></div> 
+                -->
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
@@ -538,12 +540,79 @@
             </div>
 
         </div>
+
     </div>
     <!-- End Content -->
+    <div id="div-whatsapp" class="wow animate__animated animate__fadeIn animate__delay-0.8s">
+        <a class="boton__whatsapp" id="whatsapp" target="_blank"
+            href="https://api.whatsapp.com/send?phone=5491138135612&text=¡Hola!%20Tengo%20una%20consulta%20sobre%20Crisálida"><i
+                class="fab fa-whatsapp m-1 boton__whatsapp--logo" title="Whatsapp link"></i></a>
+    </div>
+    <h1>Crisálida Carrito de Compras</h1>
+    <hr>
+    <div class="row" id="cards"></div>
+</div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+      <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-warning btn-sm" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-secondary btn-sm">
+                +
+            </button>
+            <button class="btn btn-warning btn-sm">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+      <template id="template-card">
+          <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+              <img src="" alt="" class="card-img-top">
+              <div class="card-body">
+                <h5>Titulo</h5>
+                <p>precio</p>
+                <button class="btn btn-dark">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </template>
+      
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="crisalida_footer">
-        <div class="container">
+        <div class="container wow animate__animated animate__fadeIn animate__delay-0.9s">
             <div class="row">
 
                 <div class="col-md-4 pt-5">
@@ -587,7 +656,6 @@
                         <li><a class="text-decoration-none" href="404error.html">Contacto</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="row text-light mb-4">
@@ -613,8 +681,8 @@
                 <div class="col-auto">
                     <label class="sr-only" for="subscribeEmail">Correo Electrónico</label>
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-dark border-light text-light" id="subscribeEmail" placeholder="Correo Electrónico">
-                        <div class="input-group-text btn-success text-light"><a href="#">Subscríbete</a></div>
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Correo Electrónico">
+                        <div class="input-group-text btn-success text-light">Subscríbete</div>
                     </div>
                 </div>
             </div>
@@ -625,7 +693,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright 2021 Juan Quintero
+                            Copyright &copy; 2021 Juan Quintero
                     </div>
                 </div>
             </div>
@@ -635,8 +703,7 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/crisalidacc.js"></script>
     <script src="assets/js/custom.js"></script>
