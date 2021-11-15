@@ -1,4 +1,7 @@
-[
+{
+  "status": "success",
+  "items":[
+  
     {
       "precio": 545 ,
       "id": 1,
@@ -41,3 +44,4 @@
       "title": "Jabón Vegano",
       "picture": "./assets/img/jabonvegano.jpg"
     }]
+}

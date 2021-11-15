@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/faviconn.ico">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -18,7 +20,7 @@
     <!-- estilos y loyauts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
 <body>
@@ -83,16 +85,15 @@
                             </div>
                         </div>
                     </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#crisalida_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#crisalida_search">
+                    <div>
+                    <a id="cart-btn" class="nav-icon position-relative text-decoration-none"  data-bs-toggle="modal" data-bs-target="#crisalida_search" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">3</span>
+                        <span class="item_total top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
                     </a>
+                    </div>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+7</span>
+                        <!-- <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+7</span> -->
                     </a>
                 </div>
             </div>
@@ -103,14 +104,29 @@
     <!-- modalsito -->
     <div class="modal" tabindex="-1" id="crisalida_search">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content cart">
             <div class="modal-header">
               <h5 class="modal-title">Carrito Crisálida</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body ">
+                <section class="cart__overlay">
+                    <div class="cart">
+                      <span class="close__cart">
+                      </span>
+                      <div class="cart__centent">
+                    </div>
+            
+                    
+                  </div>
+                </section>
             </div>
             <div class="modal-footer">
+
+                <div class="cart__footer">
+                <h3>Total: $ <span class="cart__total">0</span></h3>
+                <button class="clear__cart btn">Clear Cart</button>
+            </div>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               <button type="button" class="btn btn-primary">¡Comprar!</button>
             </div>
@@ -120,6 +136,9 @@
     <!-- Modal -->
 
     <!-- Start Content -->
+    
+    
+    
     <div class="container py-5">
         <div class="row wow animate__animated animate__fadeIn animate__delay-0.8s">
 
@@ -186,10 +205,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="container">
-                <div class="row" id="cards-cart"></div></div> 
-                -->
-                <div class="row">
+                <section class="products">
+                    <div class="">
+                    <div class="product__center card mb-4 product-wap rounded-0 ">
+                    </div>
+                    </div>
+                </section>
+               
+                <!-- <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4 product-wap rounded-0">
                             <div class="card rounded-0">
@@ -198,7 +221,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -235,7 +258,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -272,7 +295,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -309,7 +332,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -346,7 +369,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -383,7 +406,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -420,7 +443,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -457,7 +480,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2"><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -475,7 +498,7 @@
                                 </ul>
                                 <ul class="list-unstyled d-flex justify-content-center mb-1">
                                     <li>
-                                        <i class="text-warning fas fa-sun"></i>
+                                    <i class="text-warning fas fa-sun"></i>
                                     <i class="text-warning fas fa-sun"></i>
                                     <i class="text-warning fas fa-sun"></i>
                                     <i class="text-warning fas fa-sun"></i>
@@ -494,7 +517,7 @@
                                     <ul class="list-unstyled">
                                         <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><button id="btn-cart" class="btn btn-success text-white mt-2" ><i class="fas fa-cart-plus"></i></button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -523,7 +546,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div div="row">
                     <ul class="pagination pagination-lg justify-content-end">
                         <li class="page-item disabled">
@@ -548,67 +571,6 @@
             href="https://api.whatsapp.com/send?phone=5491138135612&text=¡Hola!%20Tengo%20una%20consulta%20sobre%20Crisálida"><i
                 class="fab fa-whatsapp m-1 boton__whatsapp--logo" title="Whatsapp link"></i></a>
     </div>
-    <h1>Crisálida Carrito de Compras</h1>
-    <hr>
-    <div class="row" id="cards"></div>
-</div>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acción</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-        <tbody id="items"></tbody>
-        <tfoot>
-          <tr id="footer">
-            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-          </tr>
-        </tfoot>
-      </table>
-      <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-            <button class="btn btn-warning btn-sm" id="vaciar-carrito">
-                vaciar todo
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
-    </template>
-    
-    <template id="template-carrito">
-      <tr>
-        <th scope="row">id</th>
-        <td>Café</td>
-        <td>1</td>
-        <td>
-            <button class="btn btn-secondary btn-sm">
-                +
-            </button>
-            <button class="btn btn-warning btn-sm">
-                -
-            </button>
-        </td>
-        <td>$ <span>500</span></td>
-      </tr>
-    </template>
-      <template id="template-card">
-          <div class="col-12 mb-2 col-md-4">
-            <div class="card">
-              <img src="" alt="" class="card-img-top">
-              <div class="card-body">
-                <h5>Titulo</h5>
-                <p>precio</p>
-                <button class="btn btn-dark">Comprar</button>
-              </div>
-            </div>
-          </div>
-        </template>
-      
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="crisalida_footer">
